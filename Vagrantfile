@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  config.vm.define :open do |openstack|
+  config.vm.define :openstack do |openstack|
     openstack.vm.box = "ubuntu/trusty64"
     openstack.vm.hostname = "openstack"
     openstack.vm.network :public_network
