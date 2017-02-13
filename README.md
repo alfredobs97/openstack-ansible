@@ -9,3 +9,5 @@ It will automatically install Openstack inside a virtual machine.
         cd openstack-ansible
         
         sh run.sh
+
+When it's finished you can access Openstack main page at http://IP-OPENSTACK/dashboard
