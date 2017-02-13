@@ -11,6 +11,6 @@ Vagrant.configure("2") do |config|
       vbox.customize ["modifyvm", :id, "--name", "openstack"]
     end
     open.vm.provison :ansible do |ansible|
-                      ansible.playbook = "main.yml"
+                      ansible.playbook = "task/main.yml"
   end
 end
