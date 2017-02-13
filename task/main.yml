@@ -1,0 +1,7 @@
+---
+- hosts: all
+  sudo: true
+  tasks:
+        - name: actualizando la cache de apt
+          apt: update_cache=yes
+        - include: openstack.yml
