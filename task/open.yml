@@ -37,3 +37,6 @@
     mode: 0770
     recurse: yes
 
+- name: Installing Openstack
+  command: ./stack.sh
+  chdir: /home/vagrant/openstack/
