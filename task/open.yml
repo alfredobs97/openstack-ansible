@@ -11,16 +11,16 @@
 
 
 - replace:
-    path: /home/vagrant/openstack/local.conf
+    dest: /home/vagrant/openstack/local.conf
     regexp: 'ADMIN_PASSWORD=nomoresecret'
     replace: 'ADMIN_PASSWORD={{Adminpass}}'
 
 - replace:
-    path: /home/vagrant/openstack/local.conf
+    dest: /home/vagrant/openstack/local.conf
     regexp: 'DATABASE_PASSWORD=stackdb'
     replace: 'DATABASE_PASSWORD={{Databasepass}}'
 
 - replace:
-    path: /home/vagrant/openstack/local.conf
+    dest: /home/vagrant/openstack/local.conf
     regexp: 'RABBIT_PASSWORD=stackqueue'
     replace: 'RABBIT_PASSWORD={{Rabbitpass}}'
