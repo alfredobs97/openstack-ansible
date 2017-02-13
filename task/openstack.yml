@@ -1,14 +1,23 @@
 ---
 - hosts: all
-  sudo: true
+
+  become: true
+
+  vars_prompt:
+
+    - name: "Adminpass"
+      prompt: "Enter Admin password"
+      private: no
+
+    - name: "Databasepass"
+      prompt: "Enter Database password"
+      private: no
+
+    - name: "Rabbitpass"
+      prompt: "Enter Rabbit password"
+      private: no
+
+
   tasks:
-       - name: instalar git
-         apt: name=git state=present
 
-       - git:
-         repo: https://git.openstack.org/openstack-dev/devstack
-         dest: /home/vagrant/openstack
-         clone: yes
-
-#- name: Copying Local.conf
-#  command: cp -r DB/recovery.conf /var/lib/postgresql/9.3/main/recovery.conf
+    - include: open.yml
