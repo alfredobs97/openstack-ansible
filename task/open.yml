@@ -39,4 +39,5 @@
 
 - name: Installing Openstack
   command: ./stack.sh
-  chdir: /home/vagrant/openstack/
+  args:
+     chdir: /home/vagrant/openstack/
