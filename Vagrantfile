@@ -7,6 +7,7 @@ Vagrant.configure("2") do |config|
     openstack.vm.hostname = "openstack"
     openstack.vm.network :public_network
     openstack.vm.provider "virtualbox" do |vbox|
+      vbox.customize ["modifyvm", :id, "--cpus", "4"]
       vbox.customize ["modifyvm", :id, "--memory", "6442"]
       vbox.customize ["modifyvm", :id, "--name", "openstack"]
     end
