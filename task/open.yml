@@ -29,3 +29,9 @@
     dest: /home/vagrant/openstack/local.conf
     regexp: '#HOST_IP=w.x.y.z'
     replace: 'HOST_IP={{ ansible_eth1.ipv4.address }}'
+
+- file:
+    path: /home/vagrant/openstack/
+    owner: vagrant
+    group: root
+    mode: 0770
