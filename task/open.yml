@@ -37,7 +37,10 @@
     mode: 0770
     recurse: yes
 
-- name: Installing Openstack
+- name: Installing Openstack (Can take up to 30 mins)
   command: ./stack.sh
+  become: true
+  become_user: vagrant
   args:
      chdir: /home/vagrant/openstack/
+     
