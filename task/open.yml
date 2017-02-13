@@ -24,3 +24,8 @@
     dest: /home/vagrant/openstack/local.conf
     regexp: 'RABBIT_PASSWORD=stackqueue'
     replace: 'RABBIT_PASSWORD={{Rabbitpass}}'
+
+- replace:
+    dest: /home/vagrant/openstack/local.conf
+    regexp: '#HOST_IP=w.x.y.z'
+    replace: 'HOST_IP={{ ansible_eth1.ipv4.address }}'
