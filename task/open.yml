@@ -30,6 +30,11 @@
     regexp: '#HOST_IP=w.x.y.z'
     replace: 'HOST_IP={{ ansible_eth1.ipv4.address }}'
 
+- replace:
+    dest: /home/vagrant/openstack/stackrc
+    regexp: 'GIT_BASE=${GIT_BASE:-git://git.openstack.org}'
+    replace: 'GIT_BASE=${GIT_BASE:-https://git.openstack.org}'
+
 - file:
     path: /home/vagrant/openstack/
     owner: vagrant
