@@ -37,8 +37,8 @@
 
 - replace:
     dest: /home/vagrant/openstack/tools/install_pip.sh
-    regexp: 'curl -f --retry 6 --retry-delay 5 \'
-    replace: 'curl -k -f --retry 6 --retry-delay 5 \'
+    regexp: 'curl -f --retry 6 --retry-delay 5 '
+    replace: 'curl -k -f --retry 6 --retry-delay 5 '
 
 - file:
     path: /home/vagrant/openstack/
