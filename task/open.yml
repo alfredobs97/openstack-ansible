@@ -32,8 +32,8 @@
 
 - replace:
     dest: /home/vagrant/openstack/stackrc
-    regexp: 'GIT_BASE=${GIT_BASE:-git://git.openstack.org}'
-    replace: 'GIT_BASE=${GIT_BASE:-https://git.openstack.org}'
+    regexp: 'GIT_BASE:-git://git.openstack.org'
+    replace: 'GIT_BASE:-https://git.openstack.org'
 
 - replace:
     dest: /home/vagrant/openstack/tools/install_pip.sh
