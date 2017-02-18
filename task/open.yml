@@ -5,6 +5,7 @@
     repo: https://git.openstack.org/openstack-dev/devstack
     dest: /home/vagrant/openstack
     clone: yes
+    force: yes
 
 - name: Copying Local.conf
   command: cp /home/vagrant/openstack/samples/local.conf /home/vagrant/openstack/local.conf
