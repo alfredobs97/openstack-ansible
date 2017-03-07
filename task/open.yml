@@ -49,7 +49,7 @@
     recurse: yes
 
 - name: Installing Openstack (Can take up to 30 mins)
-  command: FORCE=yes ./stack.sh
+  shell: FORCE=yes ./stack.sh
   become: true
   become_user: vagrant
   args:
